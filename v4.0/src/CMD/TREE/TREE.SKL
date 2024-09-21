@@ -13,7 +13,7 @@
 
 :use 6 COMMON36 	 ;"Volume Serial Number is %1-%2",CR,LF                 ;AN001;
 
-:def 7 "юдцЁ"            ;"elbo","dash","tee","bar"                             ;AN002;
+:def 7 "????"            ;"elbo","dash","tee","bar"                             ;AN002;
 ;	1. NONE OF THE FOUR CAN BE BLANK
 ;	2. EACH OF THE FOUR MUST BE UNIQUE
 ;	3. EACH CHAR MUST BE A SINGLE BYTE (NO DBCS)

@@ -67,7 +67,7 @@ INCLUDE GRCPSD.EXT								;AN000;
 ;;     Respond to GRAPHICS Int 2FH calls.					;AN000;
 ;;     The following calls are handled: 					;AN000;
 ;;										;AN000;
-;;	AL = 0 ù Install Check							;AN000;
+;;	AL = 0 ? Install Check							;AN000;
 ;;										;AN000;
 ;; Invoked By:									;AN000;
 ;;     INT 2FH instruction.							;AN000;

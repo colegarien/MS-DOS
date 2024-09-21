@@ -659,21 +659,21 @@ COM_AL_UP_END:			       ;;
    DW	 COM_NA_LO_T1_K1_END-$		  ;; Size of xlat table
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 21			       ;; number of entries
-   DB	 41,"˝"                        ;; superscript 2
+   DB	 41,"?"                        ;; superscript 2
    DB	  2,"&"                        ;;
-   DB	  3,"Ç"                        ;; acute - e
+   DB	  3,"?"                        ;; acute - e
    DB	  4,'"'                        ;;
    DB	  5,"'"                        ;;
    DB	  6,"("                        ;;
    DB	  7,"-"                        ;;
-   DB	  8,"ä"                        ;; grave - e
+   DB	  8,"?"                        ;; grave - e
    DB	  9,"_"                        ;;
-   DB	 10,"á"                        ;; c - cedilla small
-   DB	 11,"Ö"                        ;;
+   DB	 10,"?"                        ;; c - cedilla small
+   DB	 11,"?"                        ;;
    DB	 12,")"                        ;;
    DB	 13,"="                        ;;
    DB	 27,"$"                        ;;
-   DB	 40,"ó"                        ;; grave - u
+   DB	 40,"?"                        ;; grave - u
    DB	 43,"*"                        ;;
    DB	 86,'<'                        ;; +
    DB	 50,','                        ;; <
@@ -704,20 +704,20 @@ COM_NA_LO_K1_END:			  ;;
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 20			       ;; number of entries
    DB	  2,"&"                        ;;
-   DB	  3,"Ç"                        ;; acute - e
+   DB	  3,"?"                        ;; acute - e
    DB	  4,'"'                        ;;
    DB	  5,"'"                        ;;
    DB	  6,"("                        ;;
    DB	  7,"-"                        ;;
-   DB	  8,"ä"                        ;; grave - e
+   DB	  8,"?"                        ;; grave - e
    DB	  9,"!"                        ;;
-   DB	 10,"á"                        ;; c - cedilla small
-   DB	 11,"Ö"                        ;; grave - a small
+   DB	 10,"?"                        ;; c - cedilla small
+   DB	 11,"?"                        ;; grave - a small
    DB	 12,")"                        ;;
    DB	 13,"-"                        ;;
    DB	 27,"$"                        ;;
-   DB	 40,"ó"                        ;; grave ó small
-   DB	 43,0E6H		       ;; mu symbol - Ê
+   DB	 40,"?"                        ;; grave ? small
+   DB	 43,0E6H		       ;; mu symbol - ?
    DB	 41,'<'                        ;; +
    DB	 50,','                        ;; <
    DB	 51,';'                        ;; -
@@ -747,20 +747,20 @@ COM_NA_LO_K2_END:			  ;;
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 20			       ;; number of entries
    DB	  2,"&"                        ;;
-   DB	  3,"Ç"                        ;; acute - e
+   DB	  3,"?"                        ;; acute - e
    DB	  4,'"'                        ;; ' on the AT_KB
    DB	  5,"'"                        ;; *** CNS **** 12/18/86 pubs wrong
    DB	  6,"("                        ;;
    DB	  7,"-"                        ;;
-   DB	  8,"ä"                        ;; grave - e
+   DB	  8,"?"                        ;; grave - e
    DB	  9,"!"                        ;;
-   DB	 10,"á"                        ;; c - cedilla small
-   DB	 11,"Ö"                        ;;
+   DB	 10,"?"                        ;; c - cedilla small
+   DB	 11,"?"                        ;;
    DB	 12,")"                        ;;
    DB	 13,"-"                        ;;
    DB	 27,"$"                        ;;
-   DB	 40,"ó"                        ;; grave ó small
-   DB	 41,0E6H		       ;; mu symbol - Ê
+   DB	 40,"?"                        ;; grave ? small
+   DB	 41,0E6H		       ;; mu symbol - ?
    DB	 43,'<'                        ;; +
    DB	 50,','                        ;; <
    DB	 51,';'                        ;; -
@@ -799,10 +799,10 @@ COM_NA_LO_K3_END:			  ;;
    DB	 11,'0'                        ;;
    DB	 12,0F8H		       ;; degree symbol
    DB	 13,"+"                        ;; plus sign
-   DB	 27,09CH		       ;; ú symbol
+   DB	 27,09CH		       ;; ? symbol
    DB	 40,'%'                        ;;
-   DB	 41,"¸"                        ;; superscript 3
-   DB	 43,0E6H		       ;; Ê - mu symbol
+   DB	 41,"?"                        ;; superscript 3
+   DB	 43,0E6H		       ;; ? - mu symbol
    DB	 86,'>'                        ;;
    DB	 50,'?'                        ;;
    DB	 51,'.'                        ;;
@@ -843,7 +843,7 @@ COM_NA_UP_K1_END:			  ;;
    DB	 11,'0'                        ;;
    DB	 12,0F8H		       ;; degree symbol
    DB	 13,"_"                        ;; underscore
-   DB	 43,09CH		       ;; ú symbol
+   DB	 43,09CH		       ;; ? symbol
    DB	 40,'%'                        ;;
    DB	 27,"*"                        ;; asterisk
    DB	 41,'>'                        ;;
@@ -886,7 +886,7 @@ COM_NA_UP_K2_END:			  ;;
    DB	 11,'0'                        ;;
    DB	 12,0F8H		       ;; degree symbol
    DB	 13,"_"                        ;; underscore
-   DB	 41,09CH		       ;; ú symbol
+   DB	 41,09CH		       ;; ? symbol
    DB	 40,'%'                        ;;
    DB	 27,"*"                        ;; asterisk
    DB	 43,'>'                        ;;
@@ -1001,7 +1001,7 @@ COM_THIRD_K3_END:			  ;;
    DW	 COM_AC_LO_T1_END-$	       ;; Size of xlat table
    DB	 STANDARD_TABLE+ZERO_SCAN      ;; xlat options:
    DB	 1			       ;; number of scans
-   DB	 18,'Ç'                        ;; scan code,ASCII - e
+   DB	 18,'?'                        ;; scan code,ASCII - e
 COM_AC_LO_T1_END:		       ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -1023,7 +1023,7 @@ COM_AC_LO_END:			       ;;
 ;;   DW    COM_AC_UP_T1_END-$		 ;; Size of xlat table
 ;;   DB    STANDARD_TABLE+ZERO_SCAN	 ;; xlat options:
 ;;   DB    2				 ;; number of scans
-;;   DB    18,'ê'                        ;; scan code,ASCII - e
+;;   DB    18,'?'                        ;; scan code,ASCII - e
 ;;COM_AC_UP_T1_END:			 ;;
 ;;					 ;;
 ;;   DW    0				 ;; Size of xlat table - null table
@@ -1067,12 +1067,12 @@ COM_AC_LO_END:			       ;;
    DW	 COM_DI_LO_T1_END-$	       ;; Size of xlat table
    DB	 STANDARD_TABLE+ZERO_SCAN      ;; xlat options:
    DB	 6			       ;; number of scans
-   DB	 18,'â'                        ;; scan code,ASCII - e
-   DB	 16,'Ñ'                        ;; scan code,ASCII - a
-   DB	 24,'î'                        ;; scan code,ASCII - o
-   DB	 22,'Å'                        ;; scan code,ASCII - u
-   DB	 23,'ã'                        ;; scan code,ASCII - i
-   DB	 21,'ò'                        ;; scan code,ASCII - y
+   DB	 18,'?'                        ;; scan code,ASCII - e
+   DB	 16,'?'                        ;; scan code,ASCII - a
+   DB	 24,'?'                        ;; scan code,ASCII - o
+   DB	 22,'?'                        ;; scan code,ASCII - u
+   DB	 23,'?'                        ;; scan code,ASCII - i
+   DB	 21,'?'                        ;; scan code,ASCII - y
 COM_DI_LO_T1_END:		       ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -1094,9 +1094,9 @@ COM_DI_LO_END:			       ;; length of state section
    DW	 COM_DI_UP_T1_END-$	       ;; Size of xlat table
    DB	 STANDARD_TABLE+ZERO_SCAN      ;; xlat options:
    DB	 3			       ;; number of scans
-   DB	 16,'é'                        ;; scan code,ASCII - a
-   DB	 24,'ô'                        ;; scan code,ASCII - o
-   DB	 22,'ö'                        ;; scan code,ASCII - u
+   DB	 16,'?'                        ;; scan code,ASCII - a
+   DB	 24,'?'                        ;; scan code,ASCII - o
+   DB	 22,'?'                        ;; scan code,ASCII - u
 COM_DI_UP_T1_END:		       ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -1140,11 +1140,11 @@ COM_DI_SP_END:			       ;; length of state section
 ;;   DW    COM_GR_LO_T1_END-$		 ;; Size of xlat table
 ;;   DB    STANDARD_TABLE+ZERO_SCAN	 ;; xlat options:
 ;;   DB    5				 ;; number of scans
-;;   DB    18,'ä'                        ;; scan code,ASCII - e
-;;   DB    30,'Ö'                        ;; scan code,ASCII - a
-;;   DB    24,'ï'                        ;; scan code,ASCII - o
-;;   DB    22,'ó'                        ;; scan code,ASCII - u
-;;   DB    23,'ç'                        ;; scan code,ASCII - i
+;;   DB    18,'?'                        ;; scan code,ASCII - e
+;;   DB    30,'?'                        ;; scan code,ASCII - a
+;;   DB    24,'?'                        ;; scan code,ASCII - o
+;;   DB    22,'?'                        ;; scan code,ASCII - u
+;;   DB    23,'?'                        ;; scan code,ASCII - i
 ;;COM_GR_LO_T1_END:			 ;;
 ;;					 ;;
 ;;   DW    0				 ;; Size of xlat table - null table
@@ -1188,11 +1188,11 @@ COM_DI_SP_END:			       ;; length of state section
    DW	 COM_CI_LO_T1_END-$	       ;; Size of xlat table
    DB	 STANDARD_TABLE+ZERO_SCAN      ;; xlat options:
    DB	 5			       ;; number of scans
-   DB	 16,'É'                        ;; scan code,ASCII - a
-   DB	 18,'à'                        ;; scan code,ASCII - e
-   DB	 24,'ì'                        ;; scan code,ASCII - o
-   DB	 22,'ñ'                        ;; scan code,ASCII - u
-   DB	 23,'å'                        ;; scan code,ASCII - i
+   DB	 16,'?'                        ;; scan code,ASCII - a
+   DB	 18,'?'                        ;; scan code,ASCII - e
+   DB	 24,'?'                        ;; scan code,ASCII - o
+   DB	 22,'?'                        ;; scan code,ASCII - u
+   DB	 23,'?'                        ;; scan code,ASCII - i
 COM_CI_LO_T1_END:		       ;;
 				       ;;
    DW	 0			       ;;

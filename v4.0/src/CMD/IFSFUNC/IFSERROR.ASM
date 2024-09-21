@@ -228,38 +228,38 @@ BREAK <INT_2F_5 -- Routine for Extended error messages>
 ;     DO
 ;      IF AL < 0F8H  THEN
 ;	  DO
-;	  ³ IF AL .NE. 0 THEN
-;	  ³    DO
-;	  ³    ³ IF AL >= 50 .AND. AL <= 74 THEN    /* or AL = 88 */
-;	  ³    ³    DO
-;	  ³    ³    ³ Prep IFSRH below
-;	  ³    ³    ³	*  IFSR_LENGTH	    DW	   28	    ; Request length
-;	  ³    ³    ³	*  IFSR_FUNCTION    DB	    6	    ; Get Criter Text
-;	  ³    ³    ³	*+ IFSR_RETCODE     DB	    ?	    ; AL
-;	  ³    ³    ³	   IFSR_RETCLASS    DB	    ?
-;	  ³    ³    ³	   IFSR_RESV1	    DB	   17 DUP(0)
-;	  ³    ³    ³	*+ IFSR_MSG@	    DD	    ?	    ; Msg buffer address
-;	  ³    ³    ³	*+ IFSR_MSG_TYPE    DB	    ?	    ; Msg type
-;	  ³    ³    ³	   IFSR_RESV2	    DB	    ?
-;	  ³    ³    ³
-;	  ³    ³    ³ Call IFS specified in [THISIFS]
-;	  ³    ³    ³ IF IFSR_RETCODE = 0 THEN
-;	  ³    ³    ³	 DO
-;	  ³    ³    ³	   ES:DI = IFSR_MSG@
-;	  ³    ³    ³	   AL = IFSR_MSG_TYPE
-;	  ³    ³    ³	 ENDDO
-;	  ³    ³    ³ ELSE  get ifsfunc standard msg
-;	  ³    ³    ³ ENDIF
-;	  ³    ³    ³ RET 2
-;	  ³    ³    ENDDO
-;	  ³    ³ ELSE  RET 2
-;	  ³    ³ ENDIF
-;	  ³    ENDDO
-;	  ³ ELSE DO
-;	  ³	   AL = 0FFH  /* install check */
-;	  ³	   iret
-;	  ³	 ENDDO
-;	  ³ ENDIF
+;	  ? IF AL .NE. 0 THEN
+;	  ?    DO
+;	  ?    ? IF AL >= 50 .AND. AL <= 74 THEN    /* or AL = 88 */
+;	  ?    ?    DO
+;	  ?    ?    ? Prep IFSRH below
+;	  ?    ?    ?	*  IFSR_LENGTH	    DW	   28	    ; Request length
+;	  ?    ?    ?	*  IFSR_FUNCTION    DB	    6	    ; Get Criter Text
+;	  ?    ?    ?	*+ IFSR_RETCODE     DB	    ?	    ; AL
+;	  ?    ?    ?	   IFSR_RETCLASS    DB	    ?
+;	  ?    ?    ?	   IFSR_RESV1	    DB	   17 DUP(0)
+;	  ?    ?    ?	*+ IFSR_MSG@	    DD	    ?	    ; Msg buffer address
+;	  ?    ?    ?	*+ IFSR_MSG_TYPE    DB	    ?	    ; Msg type
+;	  ?    ?    ?	   IFSR_RESV2	    DB	    ?
+;	  ?    ?    ?
+;	  ?    ?    ? Call IFS specified in [THISIFS]
+;	  ?    ?    ? IF IFSR_RETCODE = 0 THEN
+;	  ?    ?    ?	 DO
+;	  ?    ?    ?	   ES:DI = IFSR_MSG@
+;	  ?    ?    ?	   AL = IFSR_MSG_TYPE
+;	  ?    ?    ?	 ENDDO
+;	  ?    ?    ? ELSE  get ifsfunc standard msg
+;	  ?    ?    ? ENDIF
+;	  ?    ?    ? RET 2
+;	  ?    ?    ENDDO
+;	  ?    ? ELSE  RET 2
+;	  ?    ? ENDIF
+;	  ?    ENDDO
+;	  ? ELSE DO
+;	  ?	   AL = 0FFH  /* install check */
+;	  ?	   iret
+;	  ?	 ENDDO
+;	  ? ENDIF
 ;	  ENDDO
 ;      ELSE  iret
 ;      ENDIF

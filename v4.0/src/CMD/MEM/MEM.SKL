@@ -7,9 +7,9 @@
 :use COMMON1						;Incorrect DOS version
 :def 10 CR,LF
 :def 11 "  Address     Name          Size       Type ",CR,LF
-:def 12 "  컴컴컴�     컴컴컴컴     컴컴컴     컴컴컴",CR,LF
+:def 12 "  ???????     ????????     ??????     ??????",CR,LF
 :def 13 "  Handle      EMS Name      Size   ",CR,LF
-:def 14 "  컴컴컴�     컴컴컴컴     컴컴컴  ",CR,LF
+:def 14 "  ???????     ????????     ??????  ",CR,LF
 :def 15 "  %1      %2     %3     %4",CR,LF
 :def 16 "                %1   %2      %3 ",CR,LF
 :def 17 "                  %1              %2 ",CR,LF       ;fix in usa

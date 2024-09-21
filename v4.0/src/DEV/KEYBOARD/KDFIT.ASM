@@ -385,14 +385,14 @@ COM_CTRL_K1_END:		       ;;
    DB	 10			       ;; number of entries
    DB	 41,"\"                        ;; \
    DB	 12,"'"                        ;; '
-   DB	 13,141 		       ;; grave i - ¡;
+   DB	 13,141 		       ;; grave i - ?;
    DB	 27,'+'                        ;; +
    DB	 86,'<'                        ;; <
    DB	 53,'-'                        ;; -
-   DB	 39,149 		       ;; grave o - •
-   DB	 40,133 		       ;; grave a - …;
-   DB	 43,151 		       ;; grave u - —;
-   DB	 26,138 		       ;; grave e - Š;
+   DB	 39,149 		       ;; grave o - ?
+   DB	 40,133 		       ;; grave a - ?;
+   DB	 43,151 		       ;; grave u - ?;
+   DB	 26,138 		       ;; grave e - ?;
 COM_NA_LO_K1_T1_END:			  ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -417,13 +417,13 @@ COM_NA_LO_K1_END:			  ;;
    DB	 9			       ;; number of entries
    DB	 41,"<"                        ;; <
    DB	 12,"'"                        ;; '
-   DB	 13,141 		       ;; grave i - ¡;
+   DB	 13,141 		       ;; grave i - ?;
    DB	 27,'+'                        ;; +
    DB	 53,'-'                        ;; -
-   DB	 39,149 		       ;; grave o - •
-   DB	 40,133 		       ;; grave a - …;
-   DB	 43,151 		       ;; grave u - —;
-   DB	 26,138 		       ;; grave e - Š;
+   DB	 39,149 		       ;; grave o - ?
+   DB	 40,133 		       ;; grave a - ?;
+   DB	 43,151 		       ;; grave u - ?;
+   DB	 26,138 		       ;; grave e - ?;
 COM_NA_LO_K2_T1_END:			  ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -447,14 +447,14 @@ COM_NA_LO_K2_END:			  ;;
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 9			       ;; number of entries
    DB	 12,"'"                        ;; '
-   DB	 13,141 		       ;; grave i - ¡;
+   DB	 13,141 		       ;; grave i - ?;
    DB	 27,'+'                        ;; +
    DB	 43,'<'                        ;; <
    DB	 53,'-'                        ;; -
-   DB	 39,149 		       ;; grave o - •
-   DB	 40,133 		       ;; grave a - …;
-   DB	 41,151 		       ;; grave u - —;
-   DB	 26,138 		       ;; grave e - Š;
+   DB	 39,149 		       ;; grave o - ?
+   DB	 40,133 		       ;; grave a - ?;
+   DB	 41,151 		       ;; grave u - ?;
+   DB	 26,138 		       ;; grave e - ?;
 COM_NA_LO_K3_T1_END:			  ;;
 				       ;;
    DW	 0			       ;; Size of xlat table - null table
@@ -478,7 +478,7 @@ COM_NA_LO_K3_END:			  ;;
    DB	 18			       ;; number of entries
    DB	  41,07CH		       ;; Solid vertical bar - |
    DB	  3,'"'                        ;;
-   DB	  4,'œ'                        ;;
+   DB	  4,'?'                        ;;
    DB	  7,'&'                        ;;
    DB	  8,'/'                        ;;
    DB	  9,'('                        ;;
@@ -486,10 +486,10 @@ COM_NA_LO_K3_END:			  ;;
    DB	 11,'='                        ;;
    DB	 12,'?'                        ;;
    DB	 13,'^'                        ;;
-   DB	 26,130 		       ;; acute e - ‚;
-   DB	 39,135 		       ;; c - cedilla - ‡
+   DB	 26,130 		       ;; acute e - ?;
+   DB	 39,135 		       ;; c - cedilla - ?
    DB	 27,'*'                        ;;
-   DB	 40,0F8H		       ;; ø - degree symbol
+   DB	 40,0F8H		       ;; ? - degree symbol
    DB	 86,'>'                        ;;
    DB	 51,';'                        ;;
    DB	 52,':'                        ;;
@@ -520,7 +520,7 @@ COM_NA_UP_K1_END:			  ;;
    DB	 18			       ;; number of entries
    DB	  41,'>'                       ;; >
    DB	  3,'"'                        ;;
-   DB	  4,'œ'                        ;;
+   DB	  4,'?'                        ;;
    DB	  7,'&'                        ;;
    DB	  8,'/'                        ;;
    DB	  9,'('                        ;;
@@ -528,10 +528,10 @@ COM_NA_UP_K1_END:			  ;;
    DB	 11,'='                        ;;
    DB	 12,'?'                        ;;
    DB	 13,'^'                        ;;
-   DB	 26,130 		       ;; acute e - ‚;
-   DB	 39,'@'                        ;; @ AT sign replaces c - cedilla - ‡
+   DB	 26,130 		       ;; acute e - ?;
+   DB	 39,'@'                        ;; @ AT sign replaces c - cedilla - ?
    DB	 27,'*'                        ;;
-   DB	 40,'#'                        ;; # sign replaces ø - degree symbol
+   DB	 40,'#'                        ;; # sign replaces ? - degree symbol
    DB	 86,'>'                        ;;
    DB	 51,';'                        ;;
    DB	 52,':'                        ;;
@@ -561,7 +561,7 @@ COM_NA_UP_K2_END:		       ;;
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 17			       ;; number of entries
    DB	  3,'"'                        ;;
-   DB	  4,'œ'                        ;;
+   DB	  4,'?'                        ;;
    DB	  7,'&'                        ;;
    DB	  8,'/'                        ;;
    DB	  9,'('                        ;;
@@ -569,10 +569,10 @@ COM_NA_UP_K2_END:		       ;;
    DB	 11,'='                        ;;
    DB	 12,'?'                        ;;
    DB	 13,'^'                        ;;
-   DB	 26,130 		       ;; acute e - ‚;
-   DB	 39,'@'                        ;; @ AT sign replaces c - cedilla - ‡
+   DB	 26,130 		       ;; acute e - ?;
+   DB	 39,'@'                        ;; @ AT sign replaces c - cedilla - ?
    DB	 27,'*'                        ;;
-   DB	 40,'#'                        ;; # sign replaces ø - degree symbol
+   DB	 40,'#'                        ;; # sign replaces ? - degree symbol
    DB	 43,'>'                        ;;
    DB	 51,';'                        ;;
    DB	 52,':'                        ;;

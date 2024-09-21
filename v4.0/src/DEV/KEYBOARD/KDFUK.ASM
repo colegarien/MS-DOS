@@ -452,9 +452,9 @@ COM_NA_LO_K3_END:			  ;;
    DW	 COM_NA_UP_T1_K1_END-$		  ;; Size of xlat table
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 5			       ;; number of entries
-   DB	 41,0AAh		       ;; ª
+   DB	 41,0AAh		       ;; ?
    DB	 3,'"'                         ;; "
-   DB	 4,09CH 		       ;; œ
+   DB	 4,09CH 		       ;; ?
    DB	 40,'@'                        ;; at sign
    DB	 43,07EH		       ;; ~
 COM_NA_UP_T1_K1_END:			  ;;
@@ -481,7 +481,7 @@ COM_NA_UP_K1_END:			  ;;
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 5			       ;; number of entries
    DB	 3,'"'                         ;; "
-   DB	 4,09CH 		       ;; œ
+   DB	 4,09CH 		       ;; ?
    DB	 41,07EH		       ;; ~
    DB	 40,'@'                        ;; at sign
    DB	 43,07CH		       ;; Broken vertical bar
@@ -508,9 +508,9 @@ COM_NA_UP_K2_END:			  ;;
    DW	 COM_NA_UP_T1_K3_END-$		  ;; Size of xlat table
    DB	 STANDARD_TABLE 	       ;; xlat options:
    DB	 5			       ;; number of entries
-   DB	 41,07Ch		       ;; ª
+   DB	 41,07Ch		       ;; ?
    DB	 3,'"'                         ;; "
-   DB	 4,09CH 		       ;; œ
+   DB	 4,09CH 		       ;; ?
    DB	 40,'@'                        ;; at sign
    DB	 43,07EH		       ;; ~
 COM_NA_UP_T1_K3_END:			  ;;

@@ -6,8 +6,8 @@ INCLUDE STRUC.INC
 .SALL
 
 
-;ษออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 ;  AX001 - P3976: Need to have all pieces of messages in MODE.SKL so have to
 ;		  implement the SYSGETMSG method of getting addressability to
@@ -15,8 +15,8 @@ INCLUDE STRUC.INC
 ;		  which returns a pointer (DS:SI) to the message piece.  The
 ;		  address is then put in the sublist block for the message
 ;		  being issued.
-;บ											  บ				   ;AN000;
-;ศออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
 
 
 
@@ -86,8 +86,8 @@ MOV   [BP].sublist_off,SI		     ;the sublist now points to the desired message p
 ENDM												  ;AN001;
 
 
-;ษอออออออออออออออออออออออออออออ  S T R U C T U R E S  ออออออออออออออออออออออออออออออออออออป
-;บ											  บ
+;??????????????????????????????  S T R U C T U R E S  ?????????????????????????????????????
+;?											  ?
 
 INCLUDE  common.stc	   ;contains the following structure
 
@@ -110,8 +110,8 @@ INCLUDE  common.stc	   ;contains the following structure
 
 ;printer_settings  ENDS
 
-;บ											  บ
-;ศอออออออออออออออออออออออออออออ  S T R U C T U R E S  ออออออออออออออออออออออออออออออออออออผ
+;?											  ?
+;??????????????????????????????  S T R U C T U R E S  ?????????????????????????????????????
 
 
 ;
@@ -125,8 +125,8 @@ PRINTF_CODE   SEGMENT  PUBLIC
 	ASSUME	CS:PRINTF_CODE,DS:PRINTF_CODE
 ;
 
-;ษอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออป
-;บ											  บ
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????
+;?											  ?
 
 EXTRN	B_item_tag:ABS		  ;see modepars
 EXTRN	COM1_or_COM2:WORD   ;=>"Must specify COM1 or COM2" message
@@ -184,12 +184,12 @@ EXTRN	SYSGETMSG:NEAR		 ;AC001;
 EXTRN	utility_msg_class:ABS	 ;used for input to sysgetmsg
 EXTRN	VERIFY:NEAR		;FINDS IF n OF LPTn IS LEGAL
 
-;บ											  บ
-;ศอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออผ
+;?											  ?
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????
 
 
-;ษอออออออออออออออออออออออออออออออ  E Q U A T E S  ออออออออออออออออออออออออออออออออออออออออป
-;บ											  บ
+;????????????????????????????????  E Q U A T E S  ?????????????????????????????????????????
+;?											  ?
 
 ;CR	 EQU	 13		 ;CARRIAGE RETURN
 ;LF	 EQU	 10		 ;LINE FEED
@@ -233,12 +233,12 @@ ENDPARM EQU	MODE
 ;PARMEQ  EQU	 PARM1+4	 ;LOCATION OF = IN LPTn= ,(NO COLON SPECIFIED)
 parm_list  EQU	 [BP]
 
-;บ											  บ
-;ศอออออออออออออออออออออออออออออออ  E Q U A T E S  ออออออออออออออออออออออออออออออออออออออออผ
+;?											  ?
+;????????????????????????????????  E Q U A T E S  ?????????????????????????????????????????
 
 
-;ษอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออป
-;บ											  บ
+;????????????????????????????????????  D A T A	???????????????????????????????????????????
+;?											  ?
 
 ;PARM1	DB	10 DUP(0)
 ;PARM2	DB	-1		;HOLDS LINES PER INCH IN CHARACTER FORM
@@ -269,12 +269,12 @@ PRINTER_ERROR	DB	00	;BOOLEAN INDICATOR OF PRINTER NOT THERE OR OFF OR OFFLINE
 EIGHTY_CHARS_LINE_REQ	DB	00	;BOOLEAN, INDICATES IF 80 CHARS/LINE REQUESTED
 REQ_132_CHARS_LINE	DB	00	;BOOLEAN, INDICATES IF 132 CHARS/LINE REQUESTED
 
-;บ											  บ
-;ศอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออผ
+;?											  ?
+;????????????????????????????????????  D A T A	???????????????????????????????????????????
 
 
-;ษอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออป
-;บ											  บ
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????
+;?											  ?
 
 PUBLIC	 busy_status	      ;used by rescode in parallel retry code
 PUBLIC columns_holder													    ;AN000;
@@ -287,8 +287,8 @@ PUBLIC	 ready_status	      ;used by analyze_and_invoke
 ;PUBLIC set_retry_flag	       ;used by invoke in turn_off_retry_case
 PUBLIC set_retry_type	      ;used by invoke in turn_off_retry_case
 
-;บ											  บ
-;ศอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออผ
+;?											  ?
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????
 
 
 ;*******************************************************************
@@ -296,7 +296,7 @@ MODEPRIN PROC NEAR
 
 
 ;On entry: "columns_holder" contains 132,80 or 88H.
-;	   "parm2" contains "[6ณ8]" (FFH if not specified).
+;	   "parm2" contains "[6?8]" (FFH if not specified).
 ;	   "parm_list[retry_index]" contains "X_item_tag" where X is e, b, r, or p
 
 	   MOV AL,LPTNO 	;AN000;LPTNO set up by modepars in first_parm_case
@@ -749,73 +749,73 @@ OUTCHR	  ENDP
 ;
 ;
 ;-------------------------------------------------------------------------------
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ณ									       ณ
-;ณ SET_RETRY_FLAG							       ณ
-;ณ --------------							       ณ
-;ณ									       ณ
-;ณ  Set the resident retry flag to type of retry active for lptX.	       ณ
-;ณ									       ณ
-;ณ  INPUT:  device - holds '1', '2', or '3' (ascii) for x of lptx.	       ณ
-;ณ	    retry_index - holds index value for the parsed retry parameter.    ณ
-;ณ	    redirected - holds true/false value for redirected status of lptx. ณ
-;ณ	    parm_list_holder - holds offset of parameter list.		       ณ
-;ณ	    resseg - holds offset of resident code in memory		       ณ
-;ณ	    res_lpt_retry_type - holds offset of lpt retry flag in resident    ณ
-;ณ	      code.							       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  RETURN: pparm - set to 'P', 'B', 'R', 'E', or '-' for type of retry active.ณ
-;ณ	    flag in resident code set					       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  MESSAGES: Infinite retry not supported on network printer.		       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  REGISTER								       ณ
-;ณ  USAGE:	AL - new setting for resident flag. (see RESCODE.SAL for       ณ
-;ณ		     format)						       ณ
-;ณ		CL - shift bit count					       ณ
-;ณ		ES - holds segment of resident code			       ณ
-;ณ		BP - offset of parameter list				       ณ
-;ณ		DI - offset of retry index within parameter list	       ณ
-;ณ		DL - current resident flag setting			       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  PSUEDO CODE:							       ณ
-;ณ									       ณ
-;ณ	SAVE REGISTERS							       ณ
-;ณ	SET UP SEGMENT REGISTER AND BIT MASKS				       ณ
-;ณ	IF <RETRY REQUESTED>						       ณ
-;ณ	   IF <PRINTER IS REDIRECTED>					       ณ
-;ณ	      PRINT ERROR MESSAGE - not supported on network printer.	       ณ
-;ณ	   ELSE 							       ณ
-;ณ	      SET UP PARAMETER LIST STRUCTURE				       ณ
-;ณ	      SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER    ณ
-;ณ	      IF <RESIDENT CODE IS NOT LOADED>				       ณ
-;ณ		 LOAD RESIDENT CODE					       ณ
-;ณ	      ENDIF							       ณ
-;ณ	      GET CURRENT res_lpt_retry_type				       ณ
-;ณ	      SET AND STORE NEW res_lpt_retry_type			       ณ
-;ณ	   ENDIF							       ณ
-;ณ	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ณ
-;ณ	   GET CURRENT res_lpt_retry_type				       ณ
-;ณ	   IF <POSITIONAL PARAMETER SPECIFIED>				       ณ
-;ณ	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ณ
-;ณ	   ELSE 							       ณ
-;ณ	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ณ
-;ณ	   ENDIF							       ณ
-;ณ	ELSE								       ณ
-;ณ	   SET pparm TO '-'						       ณ
-;ณ	ENDIF								       ณ
-;ณ	RESTORE REGISTERS						       ณ
-;ณ	RETURN								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  SIDE EFFECT: Loads resident code if it is needed and has not been loaded.  ณ
-;ณ									       ณ
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+;???????????????????????????????????????????????????????????????????????????????
+;?									       ?
+;? SET_RETRY_FLAG							       ?
+;? --------------							       ?
+;?									       ?
+;?  Set the resident retry flag to type of retry active for lptX.	       ?
+;?									       ?
+;?  INPUT:  device - holds '1', '2', or '3' (ascii) for x of lptx.	       ?
+;?	    retry_index - holds index value for the parsed retry parameter.    ?
+;?	    redirected - holds true/false value for redirected status of lptx. ?
+;?	    parm_list_holder - holds offset of parameter list.		       ?
+;?	    resseg - holds offset of resident code in memory		       ?
+;?	    res_lpt_retry_type - holds offset of lpt retry flag in resident    ?
+;?	      code.							       ?
+;?									       ?
+;?									       ?
+;?  RETURN: pparm - set to 'P', 'B', 'R', 'E', or '-' for type of retry active.?
+;?	    flag in resident code set					       ?
+;?									       ?
+;?									       ?
+;?  MESSAGES: Infinite retry not supported on network printer.		       ?
+;?									       ?
+;?									       ?
+;?  REGISTER								       ?
+;?  USAGE:	AL - new setting for resident flag. (see RESCODE.SAL for       ?
+;?		     format)						       ?
+;?		CL - shift bit count					       ?
+;?		ES - holds segment of resident code			       ?
+;?		BP - offset of parameter list				       ?
+;?		DI - offset of retry index within parameter list	       ?
+;?		DL - current resident flag setting			       ?
+;?									       ?
+;?									       ?
+;?  PSUEDO CODE:							       ?
+;?									       ?
+;?	SAVE REGISTERS							       ?
+;?	SET UP SEGMENT REGISTER AND BIT MASKS				       ?
+;?	IF <RETRY REQUESTED>						       ?
+;?	   IF <PRINTER IS REDIRECTED>					       ?
+;?	      PRINT ERROR MESSAGE - not supported on network printer.	       ?
+;?	   ELSE 							       ?
+;?	      SET UP PARAMETER LIST STRUCTURE				       ?
+;?	      SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER    ?
+;?	      IF <RESIDENT CODE IS NOT LOADED>				       ?
+;?		 LOAD RESIDENT CODE					       ?
+;?	      ENDIF							       ?
+;?	      GET CURRENT res_lpt_retry_type				       ?
+;?	      SET AND STORE NEW res_lpt_retry_type			       ?
+;?	   ENDIF							       ?
+;?	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ?
+;?	   GET CURRENT res_lpt_retry_type				       ?
+;?	   IF <POSITIONAL PARAMETER SPECIFIED>				       ?
+;?	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ?
+;?	   ELSE 							       ?
+;?	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ?
+;?	   ENDIF							       ?
+;?	ELSE								       ?
+;?	   SET pparm TO '-'						       ?
+;?	ENDIF								       ?
+;?	RESTORE REGISTERS						       ?
+;?	RETURN								       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  SIDE EFFECT: Loads resident code if it is needed and has not been loaded.  ?
+;?									       ?
+;???????????????????????????????????????????????????????????????????????????????
 ;
 ;set_retry_flag PROC NEAR												     ;AN663;
 ;															     ;AN663;
@@ -922,67 +922,67 @@ OUTCHR	  ENDP
 ;												      ;AN663;
 ;set_retry_flag ENDP										      ;AN663;
 ;-------------------------------------------------------------------------------
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ณ									       ณ
-;ณ SET_retry_type							       ณ
-;ณ --------------							       ณ
-;ณ									       ณ
-;ณ  Set the resident retry mask to for all LPTs
-;ณ									       ณ
-;ณ  INPUT:  device - holds '1', '2', or '3' (ascii) for x of lptx.	       ณ
-;ณ	    retry_index - holds index value for the parsed retry parameter.    ณ
-;ณ	    redirected - holds true/false value for redirected status of lptx. ณ
-;ณ	    parm_list_holder - holds offset of parameter list.		       ณ
-;ณ	    resseg - holds offset of resident code in memory		       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  RETURN:
-;ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  MESSAGES: none
-;ณ									       ณ
-;ณ									       ณ
-;ณ  REGISTER								       ณ
-;ณ  USAGE:	AL -
-;ณ
-;ณ		CL -
-;ณ		ES -
-;ณ		BP -
-;ณ		DI -
-;ณ		DL -
-;ณ									       ณ
-;ณ									       ณ
-;ณ  PSUEDO CODE:							       ณ
-;ณ
-;ณ									       ณ
-;ณ	SAVE REGISTERS							       ณ
-;ณ	SET UP SEGMENT REGISTER
-;ณ	IF <RETRY REQUESTED>						       ณ
-;ณ	   IF <PRINTER IS REDIRECTED>					       ณ
-;ณ	      PRINT ERROR MESSAGE - not supported on network printer.	       ณ
-;ณ	   ELSE 							       ณ
-;ณ	      SET UP PARAMETER LIST STRUCTURE				       ณ
-;ณ	      SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER    ณ
-;ณ	      LOAD RESIDENT CODE IF NEEDED				       ณ
-;ณ	      SET AND STORE NEW lpt retry mask
-;ณ	   ENDIF							       ณ
-;ณ	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ณ
-;ณ	   IF <POSITIONAL PARAMETER SPECIFIED>				       ณ
-;ณ	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ณ
-;ณ	   ELSE 							       ณ
-;ณ	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ณ
-;ณ	   ENDIF							       ณ
-;ณ	ELSE								       ณ
-;ณ	   SET pparm TO '-'						       ณ
-;ณ	ENDIF								       ณ
-;ณ	RESTORE REGISTERS						       ณ
-;ณ	RETURN								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  SIDE EFFECT:
-;ณ									       ณ
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+;???????????????????????????????????????????????????????????????????????????????
+;?									       ?
+;? SET_retry_type							       ?
+;? --------------							       ?
+;?									       ?
+;?  Set the resident retry mask to for all LPTs
+;?									       ?
+;?  INPUT:  device - holds '1', '2', or '3' (ascii) for x of lptx.	       ?
+;?	    retry_index - holds index value for the parsed retry parameter.    ?
+;?	    redirected - holds true/false value for redirected status of lptx. ?
+;?	    parm_list_holder - holds offset of parameter list.		       ?
+;?	    resseg - holds offset of resident code in memory		       ?
+;?									       ?
+;?									       ?
+;?  RETURN:
+;?
+;?									       ?
+;?									       ?
+;?  MESSAGES: none
+;?									       ?
+;?									       ?
+;?  REGISTER								       ?
+;?  USAGE:	AL -
+;?
+;?		CL -
+;?		ES -
+;?		BP -
+;?		DI -
+;?		DL -
+;?									       ?
+;?									       ?
+;?  PSUEDO CODE:							       ?
+;?
+;?									       ?
+;?	SAVE REGISTERS							       ?
+;?	SET UP SEGMENT REGISTER
+;?	IF <RETRY REQUESTED>						       ?
+;?	   IF <PRINTER IS REDIRECTED>					       ?
+;?	      PRINT ERROR MESSAGE - not supported on network printer.	       ?
+;?	   ELSE 							       ?
+;?	      SET UP PARAMETER LIST STRUCTURE				       ?
+;?	      SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER    ?
+;?	      LOAD RESIDENT CODE IF NEEDED				       ?
+;?	      SET AND STORE NEW lpt retry mask
+;?	   ENDIF							       ?
+;?	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ?
+;?	   IF <POSITIONAL PARAMETER SPECIFIED>				       ?
+;?	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ?
+;?	   ELSE 							       ?
+;?	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ?
+;?	   ENDIF							       ?
+;?	ELSE								       ?
+;?	   SET pparm TO '-'						       ?
+;?	ENDIF								       ?
+;?	RESTORE REGISTERS						       ?
+;?	RETURN								       ?
+;?									       ?
+;?									       ?
+;?  SIDE EFFECT:
+;?									       ?
+;???????????????????????????????????????????????????????????????????????????????
 ;
 set_retry_type PROC NEAR												    ;AN663;
 															    ;AN663;

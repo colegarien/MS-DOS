@@ -1684,7 +1684,7 @@ Check_DBCS_slash proc near		;AN006;
 	mov	di,offset dstring	;AN006; ;dstring will correspond to the string pointed to by
 	mov	al,00			;AN006; ;string_seg:string_off and for each character in the string
 	rep	stosb			;AN006; ;that is DBCS a corresponding "D" will be stored in dstring.
-					;AN006; ;example:    string : [c:\Å\Å\ ]
+					;AN006; ;example:    string : [c:\?\?\ ]
 					;	     dstring: [   D D  ] (there are two DBCS characters)
 ;
 	sub	si,string_off		;AN006; ;si will equal length of string from beginning to character that may be a slash.

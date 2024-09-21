@@ -8,8 +8,8 @@
 ;.SALL															   ;AN000;
 
 
-;ษออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 ;  AC000 - P2944: Was displaying the lines and column settings for CON even
 ;		  though couldn't get them when ANSI.SYS isn't loaded.  Now
@@ -28,12 +28,12 @@
 ;     5/20/88	  conflict with a Microsoft product that has already been
 ;		  shipped.
 
-;บ											  บ				   ;AN000;
-;ศออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษออออออออออออออออออออออออออออออออ  M A C R O S  อออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;?????????????????????????????????  M A C R O S  ??????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 GET_EXTENDED_ERROR   MACRO												   ;AN000;
 															   ;AN000;
@@ -57,13 +57,13 @@ DISPLAY MACRO	MESSAGE 												   ;AN000;
 ENDM															   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศออออออออออออออออออออออออออออออออ  M A C R O S  อออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;?????????????????????????????????  M A C R O S  ??????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ  E Q U A T E S  ออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????  E Q U A T E S  ?????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 INCLUDE modequat.inc													   ;AN000;
 															   ;AN000;
@@ -114,12 +114,12 @@ text	 EQU   01	   ;mode field of IOCTL 0C call indicating screen mode type (vs A
 true	 EQU   0FFH													   ;AN000;
 unspecified		EQU   0FFH  ;state of item_tags in parm_list if the positonal parm was not specified		   ;AN664;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  E Q U A T E S  ออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  E Q U A T E S  ?????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออ  S T R U C T U R E S  ออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;??????????????????????????????  S T R U C T U R E S  ?????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 des_strt_packet   STRUC 												   ;AN000;
@@ -182,8 +182,8 @@ INCLUDE COMMON.STC	;includes the following strucs									   ;AN000;
 ;parm_list_entry   ENDS 												   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออ  S T R U C T U R E S  ออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;??????????????????????????????  S T R U C T U R E S  ?????????????????????????????????????				   ;AN000;
 															   ;AN000;
 ROM    SEGMENT AT 0													   ;AN000;
 	ORG	530H													   ;AN000;
@@ -196,8 +196,8 @@ PRINTF_CODE SEGMENT PUBLIC												   ;AN000;
 	ASSUME	CS:PRINTF_CODE,DS:PRINTF_CODE,SS:PRINTF_CODE								   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 PUBLIC	 analyze_and_invoke	 ;make available to "MAIN"                                                                 ;AN000;
 PUBLIC	 busy_retry_active	      ;used by modecom									   ;AN000;
@@ -208,12 +208,12 @@ PUBLIC	 no_retry_active	    ;used by modecom									   ;AN000;
 PUBLIC	 parm_list_holder	    ;used by modeprin									   ;AN664;
 PUBLIC	 ready_retry_active	       ;used by modecom 								   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 EXTRN	 ANSI_not_loaded:BYTE	   ;see modedefs.inc									   ;AN000;
 EXTRN	 BAUD_equal:BYTE			;the string "BAUD=", see modepars                                          ;AN000;
@@ -369,12 +369,12 @@ EXTRN	 printer_status:ABS												   ;AN000;
 EXTRN	 turn_off_reroute:ABS												   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????????  D A T A	???????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 ANSI_installed		DB    false	  ;boolean indicator of whether ANSI.SYS is installed				   ;AN000;
 columns_specified	DB    false	  ;indicates if columns= was on the command line, see set_con_features_case;AN000;
@@ -398,8 +398,8 @@ IOCTL0C_data_block   IOCTL0C_def<>											   ;AN000;
 
 PUBLIC IOCTL0C_data_block
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????????  D A T A	???????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 check_ANSI_installed PROC  NEAR 	  ;See if ANSI.SYS is installed 						;AC001;
 
@@ -514,33 +514,33 @@ old_video_mode_set_IOCTL   ENDP 				;AN004;
 
 															   ;AN000;
 ;-------------------------------------------------------------------------------					   ;AN000;
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
-;ณ
-;ณ CHECK_COM_PORTS_ATTACHED
-;ณ ------------------------
-;ณ
-;ณ  Return the number of com ports in the machine.
-;ณ
-;ณ  INPUT: none
-;ณ
-;ณ
-;ณ  RETURN: com_ports_attached - number of com ports
-;ณ
-;ณ
-;ณ  MESSAGES: none
-;ณ
-;ณ  REGISTER
-;ณ  USAGE:	SI - index of the FOR loop and displacement from serial_base
-;ณ		ES - holds segment of ROM data area
-;ณ
-;ณ
-;ณ  ASSUMPTIONS: The user has initialized com_ports_attached to zero.
-;ณ
-;ณ
-;ณ  SIDE EFFECT: ES is lost
-;ณ		 SI is lost
-;ณ															   ;AN000;
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
+;?
+;? CHECK_COM_PORTS_ATTACHED
+;? ------------------------
+;?
+;?  Return the number of com ports in the machine.
+;?
+;?  INPUT: none
+;?
+;?
+;?  RETURN: com_ports_attached - number of com ports
+;?
+;?
+;?  MESSAGES: none
+;?
+;?  REGISTER
+;?  USAGE:	SI - index of the FOR loop and displacement from serial_base
+;?		ES - holds segment of ROM data area
+;?
+;?
+;?  ASSUMPTIONS: The user has initialized com_ports_attached to zero.
+;?
+;?
+;?  SIDE EFFECT: ES is lost
+;?		 SI is lost
+;?															   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
 
 check_com_ports_attached   PROC  NEAR
 
@@ -561,37 +561,37 @@ check_com_ports_attached   ENDP
 
 
 ;-------------------------------------------------------------------------------					   ;AN000;
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
-;ณ
-;ณ CHECK_PRN_PORTS_ATTACHED
-;ณ ------------------------
-;ณ
-;ณ  Return the number of printer ports in the machine. The network will put a 2
-;ณ  in th address word if the printer is redirected, so for the printer to
-;ณ  actually exist the address must be greater than 2 ("redirected").  Since
-;ณ  can't have infinite retry on redirected printers only want to count ports
-;ณ  with >2 for addresses.
-;ณ
-;ณ  INPUT: none
-;ณ
-;ณ
-;ณ  RETURN: prn_ports_attached - number of printer ports
-;ณ
-;ณ
-;ณ  MESSAGES: none
-;ณ
-;ณ  REGISTER
-;ณ  USAGE:	SI - index of the FOR loop and displacement from printr
-;ณ		ES - holds segment of ROM data area (0 in this case)
-;ณ
-;ณ
-;ณ  ASSUMPTIONS: All valid printer port addresses are >2.
-;ณ
-;ณ
-;ณ  SIDE EFFECT: ES is lost
-;ณ		 SI is lost
-;ณ															   ;AN000;
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
+;?
+;? CHECK_PRN_PORTS_ATTACHED
+;? ------------------------
+;?
+;?  Return the number of printer ports in the machine. The network will put a 2
+;?  in th address word if the printer is redirected, so for the printer to
+;?  actually exist the address must be greater than 2 ("redirected").  Since
+;?  can't have infinite retry on redirected printers only want to count ports
+;?  with >2 for addresses.
+;?
+;?  INPUT: none
+;?
+;?
+;?  RETURN: prn_ports_attached - number of printer ports
+;?
+;?
+;?  MESSAGES: none
+;?
+;?  REGISTER
+;?  USAGE:	SI - index of the FOR loop and displacement from printr
+;?		ES - holds segment of ROM data area (0 in this case)
+;?
+;?
+;?  ASSUMPTIONS: All valid printer port addresses are >2.
+;?
+;?
+;?  SIDE EFFECT: ES is lost
+;?		 SI is lost
+;?															   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
 
 check_prn_ports_attached   PROC  NEAR
 
@@ -613,58 +613,58 @@ check_prn_ports_attached   ENDP
 
 
 ;-------------------------------------------------------------------------------					   ;AN000;
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
-;ณ															   ;AN000;
-;ณ GET_DEVICE_RETRY_TYPE												   ;AN000;
-;ณ ---------------------												   ;AN000;
-;ณ															   ;AN000;
-;ณ  Return the type of retry active for comX or lptX.									   ;AN000;
-;ณ															   ;AN000;
-;ณ  INPUT: device_request - scalar indicating what status the user requested.						   ;AN000;
-;ณ		use the following equates:										   ;AN000;
-;ณ															   ;AN000;
-;ณ		    com1_retry_type_status   EQU  0									   ;AN000;
-;ณ		    com2_retry_type_status   EQU  2									   ;AN000;
-;ณ		    com3_retry_type_status   EQU  4									   ;AN000;
-;ณ		    com4_retry_type_status   EQU  6									   ;AN000;
-;ณ		    lpt1_retry_type_status										   ;AN000;
-;ณ		    lpt2_retry_type_status										   ;AN000;
-;ณ		    lpt3_retry_type_status										   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  RETURN: returned_retry_type - scalar indicating type of retry active for						   ;AN000;
-;ณ		 the requested device. compare with the following equates:						   ;AN000;
-;ณ															   ;AN000;
-;ณ		    no_retry_flag											   ;AN000;
-;ณ		    error_status										    ;AN000;
-;ณ		    busy_status 										     ;AN000;
-;ณ		    ready_status										    ;AN000;
-;ณ															   ;AN000;
-;ณ	     retry_type_ptr - set to proper string									   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  MESSAGES: none													   ;AN000;
-;ณ															   ;AN000;
-;ณ  REGISTER														   ;AN000;
-;ณ  USAGE:	CL - For com ports it serves as bit shift count for the retry type byte.
-;ณ															   ;AN000;
-;ณ		AL - On exit holds retry type scalar on exit (returned_retry_type)					  ;AN000;
-;ณ															   ;AN000;
-;ณ		ES - holds segment of resident mode code								   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  CONVENTIONS: The value in device_request is used as an index into the LPTX						   ;AN000;
-;ณ		  array of retry type flags, or as a bit shift count for the						   ;AN000;
-;ณ		  COM retry type byte.											;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  ASSUMPTIONS: The user has initialized device_request on entry with						      ;AN000;
-;ณ		 the equates provided.											   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  SIDE EFFECT: none.													   ;AN000;
-;ณ															   ;AN000;
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
+;?															   ;AN000;
+;? GET_DEVICE_RETRY_TYPE												   ;AN000;
+;? ---------------------												   ;AN000;
+;?															   ;AN000;
+;?  Return the type of retry active for comX or lptX.									   ;AN000;
+;?															   ;AN000;
+;?  INPUT: device_request - scalar indicating what status the user requested.						   ;AN000;
+;?		use the following equates:										   ;AN000;
+;?															   ;AN000;
+;?		    com1_retry_type_status   EQU  0									   ;AN000;
+;?		    com2_retry_type_status   EQU  2									   ;AN000;
+;?		    com3_retry_type_status   EQU  4									   ;AN000;
+;?		    com4_retry_type_status   EQU  6									   ;AN000;
+;?		    lpt1_retry_type_status										   ;AN000;
+;?		    lpt2_retry_type_status										   ;AN000;
+;?		    lpt3_retry_type_status										   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  RETURN: returned_retry_type - scalar indicating type of retry active for						   ;AN000;
+;?		 the requested device. compare with the following equates:						   ;AN000;
+;?															   ;AN000;
+;?		    no_retry_flag											   ;AN000;
+;?		    error_status										    ;AN000;
+;?		    busy_status 										     ;AN000;
+;?		    ready_status										    ;AN000;
+;?															   ;AN000;
+;?	     retry_type_ptr - set to proper string									   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  MESSAGES: none													   ;AN000;
+;?															   ;AN000;
+;?  REGISTER														   ;AN000;
+;?  USAGE:	CL - For com ports it serves as bit shift count for the retry type byte.
+;?															   ;AN000;
+;?		AL - On exit holds retry type scalar on exit (returned_retry_type)					  ;AN000;
+;?															   ;AN000;
+;?		ES - holds segment of resident mode code								   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  CONVENTIONS: The value in device_request is used as an index into the LPTX						   ;AN000;
+;?		  array of retry type flags, or as a bit shift count for the						   ;AN000;
+;?		  COM retry type byte.											;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  ASSUMPTIONS: The user has initialized device_request on entry with						      ;AN000;
+;?		 the equates provided.											   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  SIDE EFFECT: none.													   ;AN000;
+;?															   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
 															   ;AN000;
 get_device_retry_type PROC NEAR 					;AN665;
 
@@ -710,58 +710,58 @@ RET									;AN665;
 
 get_device_retry_type ENDP						;AN665;
 															   ;AN000;
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
-;ณ															   ;AN000;
-;ณ ANALYZE_AND_INVOKE													   ;AN000;
-;ณ ------------------													   ;AN000;
-;ณ															   ;AN000;
-;ณ The command line is boken down into pieces by "parse_parameters".  Each piece                                           ;AN000;
-;ณ is analyzed here, and the appropriate routine called to setup and/or execute 					   ;AN000;
-;ณ the requested function.												   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  INPUT: request_type - scalar indicating what operation the user requested.						   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  RETURN: none													   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  MESSAGES: none													   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  REGISTER														   ;AN000;
-;ณ  USAGE:	 DI - index into the list of parsed parms, the array parm_list. 					   ;AN000;
-;ณ															   ;AN000;
-;ณ		 CX - temporary holder for memory to memory MOVs							   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  CONVENTIONS:													   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  ASSUMPTIONS: All the input are valid. The parm_list entry past the last one 					   ;AN000;
-;ณ		 has a parm_type of bogus.										   ;AN000;
-;ณ															   ;AN000;
-;ณ		 The lines and columns values are in binary for request_type=						   ;AN000;
-;ณ		 set_con_features											   ;AN000;
-;ณ															   ;AN000;
-;ณ		 The codepage numbers were put into des_start_packet.							   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ณ  SIDE EFFECT:													   ;AN000;
-;ณ															   ;AN000;
-;ณ															   ;AN000;
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ					   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
+;?															   ;AN000;
+;? ANALYZE_AND_INVOKE													   ;AN000;
+;? ------------------													   ;AN000;
+;?															   ;AN000;
+;? The command line is boken down into pieces by "parse_parameters".  Each piece                                           ;AN000;
+;? is analyzed here, and the appropriate routine called to setup and/or execute 					   ;AN000;
+;? the requested function.												   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  INPUT: request_type - scalar indicating what operation the user requested.						   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  RETURN: none													   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  MESSAGES: none													   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  REGISTER														   ;AN000;
+;?  USAGE:	 DI - index into the list of parsed parms, the array parm_list. 					   ;AN000;
+;?															   ;AN000;
+;?		 CX - temporary holder for memory to memory MOVs							   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  CONVENTIONS:													   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  ASSUMPTIONS: All the input are valid. The parm_list entry past the last one 					   ;AN000;
+;?		 has a parm_type of bogus.										   ;AN000;
+;?															   ;AN000;
+;?		 The lines and columns values are in binary for request_type=						   ;AN000;
+;?		 set_con_features											   ;AN000;
+;?															   ;AN000;
+;?		 The codepage numbers were put into des_start_packet.							   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;?  SIDE EFFECT:													   ;AN000;
+;?															   ;AN000;
+;?															   ;AN000;
+;???????????????????????????????????????????????????????????????????????????????					   ;AN000;
 															   ;AN000;
 analyze_and_invoke  PROC  NEAR	    ;AX000;										   ;AN000;
 															   ;AN000;
@@ -1256,7 +1256,7 @@ PUBLIC dummy9
 															   ;AN000;
       POP   DI					;restore parm list index						   ;AN000;
 
-      .IF <NOERROR EQ TRUE> AND 	     ;process ,r ณ l,[T]							 ;AN000;
+      .IF <NOERROR EQ TRUE> AND 	     ;process ,r ? l,[T]							 ;AN000;
       MOV   BX,parm_list_holder 		;restore parm_list_BX							   ;AN000;
       ADD   DI,TYPE parm_list_entry	  ;process second parm, shift direction 					   ;AN000;
       .IF <parm_list_BX[DI].item_tag NE unspecified> THEN								   ;AN000;

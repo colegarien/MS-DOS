@@ -77,8 +77,8 @@ TITLE	DOS - CONSOLE Code Page Switching Device Driver
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 IF1					;
 	%OUT .Compiling:     DISPLAY.ASM
-	%OUT .		     ô CPS-CON driver
-	%OUT .		     õ Version 3.30
+	%OUT .		     ? CPS-CON driver
+	%OUT .		     ? Version 3.30
 	%OUT .Include Files:
 ENDIF					;
 	INCLUDE MACROS.INC		;

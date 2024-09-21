@@ -5,16 +5,16 @@ TITLE MODECOM.ASM - RS232 SUPPORT FOR THE MODE COMMAND									   ;AN000;
 INCLUDE STRUC.INC													   ;AN000;
 .LIST															   ;AN000;
 
-;ษออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 ;  AC000 - P2852: Loading resident code trashed CX which was used as a shift
 ;		  count.
 
 ;  AC001 - P3540: PS/2 only parms other than baud not being treated properly.
 
-;บ											  บ				   ;AN000;
-;ศออออออออออออออออออออออออออออออออ  P R O L O G  อออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;?????????????????????????????????  P R O L O G  ??????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 DISPLAY MACRO	MESSAGE 												   ;AN000;
@@ -46,8 +46,8 @@ INCLUDE  common.stc	   ;contains the following structure								   ;AN000;
 															   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ E Q U A T E S ออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											บ				   ;AN000;
+;???????????????????????????????? E Q U A T E S ?????????????????????????????????????????				   ;AN000;
+;?											?				   ;AN000;
 															   ;AN000;
 
 INCLUDE modequat.inc		 ;AN000;include definition of false, machine types
@@ -69,8 +69,8 @@ true	    EQU 0FFH													   ;AN000;
 ;Wrangler    EQU 0F8H		  ;primary model byte									    ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  E Q U A T E S  ออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  E Q U A T E S  ?????????????????????????????????????????				   ;AN000;
 
 				; BEGINNING OF PROC MODETO)								   ;AN000;
 ROM    SEGMENT AT 0													   ;AN000;
@@ -86,8 +86,8 @@ PAGE															   ;AN000;
 PRINTF_CODE	   SEGMENT  PUBLIC											   ;AN000;
 	   ASSUME CS:PRINTF_CODE,DS:PRINTF_CODE 									   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 EXTRN  B_item_tag:ABS		 ;see modepars										   ;AN000;
 EXTRN  baud_19200:BYTE													   ;AN000;
@@ -155,12 +155,12 @@ EXTRN  twentyfourhundred_item_tag:ABS	  ;see modepars.asm								   ;AN000;
 EXTRN  two_item_tag:ABS 	;see modepars										   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  E X T R N S	ออออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  E X T R N S	???????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 PUBLIC	baud_index		;holder of the index in the parm list of the baud rate requested			   ;AN000;
 PUBLIC	data_bits_index 	;set by invoke										   ;AN000;
@@ -172,13 +172,13 @@ PUBLIC	setcom			;get it listed in the link map								   ;AN000;
 PUBLIC	setto			;get it listed in link map for debugging						   ;AN000;
 PUBLIC	stop_bits_index 	;set by invoke										   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออ  P U B L I C S  ออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????  P U B L I C S  ?????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 															   ;AN000;
-;ษอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออป				   ;AN000;
-;บ											  บ				   ;AN000;
+;????????????????????????????????????  D A T A	???????????????????????????????????????????				   ;AN000;
+;?											  ?				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 ;THESE FOLLOWING BAUD RATES REPRESENT THE 1ST 2 CHAR									   ;AN000;
@@ -204,8 +204,8 @@ retry_index	DW   0													   ;AN000;
 ;	    DB	  CR,LF,"$"    ;END OF 'INITMSG'                                                                           ;AN000;
 															   ;AN000;
 															   ;AN000;
-;บ											  บ				   ;AN000;
-;ศอออออออออออออออออออออออออออออออออออ  D A T A	ออออออออออออออออออออออออออออออออออออออออออผ				   ;AN000;
+;?											  ?				   ;AN000;
+;????????????????????????????????????  D A T A	???????????????????????????????????????????				   ;AN000;
 															   ;AN000;
 															   ;AN000;
 SUBTTL SET UP FOR SERIAL RETRY												   ;AN000;
@@ -213,67 +213,67 @@ PAGE															   ;AN000;
 ;
 ;
 ;-------------------------------------------------------------------------------
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ณ									       ณ
-;ณ SETTO								       ณ
-;ณ -----								       ณ
-;ณ									       ณ
-;ณ  Set the resident retry flag to type of retry active for comx.	       ณ
-;ณ									       ณ
-;ณ  INPUT:  device - holds '1', '2', '3' or '4' (ascii) for x of lptx.         ณ
-;ณ	    retry_index - holds index value for the parsed retry parameter.    ณ
-;ณ	    resseg - holds offset of resident code in memory		       ณ
-;ณ	    res_com_retry_type - holds offset of com retry flag in resident    ณ
-;ณ	      code.							       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  RETURN: pparm - set to 'P', 'B', 'R', 'E', or '-' for type of retry active.ณ
-;ณ	    flag in resident code set					       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  MESSAGES: none.							       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  REGISTER								       ณ
-;ณ  USAGE:	AL - new setting for resident flag. (see RESCODE.SAL for       ณ
-;ณ		     format)						       ณ
-;ณ		CL - shift bit count					       ณ
-;ณ		ES - holds segment of resident code			       ณ
-;ณ		BP - offset of parameter list				       ณ
-;ณ		DI - offset of retry index within parameter list	       ณ
-;ณ		DL - current resident flag setting			       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  PSUEDO CODE:							       ณ
-;ณ									       ณ
-;ณ	SAVE REGISTERS							       ณ
-;ณ	SET UP SEGMENT REGISTER AND BIT MASKS				       ณ
-;ณ	IF <RETRY REQUESTED>						       ณ
-;ณ	   SET UP PARAMETER LIST STRUCTURE				       ณ
-;ณ	   SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER       ณ
-;ณ	   IF <RESIDENT CODE IS NOT LOADED>				       ณ
-;ณ	      LOAD RESIDENT CODE					       ณ
-;ณ	   ENDIF							       ณ
-;ณ	   GET CURRENT com_lpt_retry_type				       ณ
-;ณ	   SET AND STORE NEW com_lpt_retry_type 			       ณ
-;ณ	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ณ
-;ณ	   GET CURRENT com_lpt_retry_type				       ณ
-;ณ	   IF <POSITIONAL PARAMETER SPECIFIED>				       ณ
-;ณ	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ณ
-;ณ	   ELSE 							       ณ
-;ณ	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ณ
-;ณ	   ENDIF							       ณ
-;ณ	ELSE								       ณ
-;ณ	   SET pparm TO '-'                                                    ณ
-;ณ	ENDIF								       ณ
-;ณ	RESTORE REGISTERS						       ณ
-;ณ	RETURN								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  SIDE EFFECT: Loads resident code if it is needed and has not been loaded.  ณ
-;ณ									       ณ
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+;???????????????????????????????????????????????????????????????????????????????
+;?									       ?
+;? SETTO								       ?
+;? -----								       ?
+;?									       ?
+;?  Set the resident retry flag to type of retry active for comx.	       ?
+;?									       ?
+;?  INPUT:  device - holds '1', '2', '3' or '4' (ascii) for x of lptx.         ?
+;?	    retry_index - holds index value for the parsed retry parameter.    ?
+;?	    resseg - holds offset of resident code in memory		       ?
+;?	    res_com_retry_type - holds offset of com retry flag in resident    ?
+;?	      code.							       ?
+;?									       ?
+;?									       ?
+;?  RETURN: pparm - set to 'P', 'B', 'R', 'E', or '-' for type of retry active.?
+;?	    flag in resident code set					       ?
+;?									       ?
+;?									       ?
+;?  MESSAGES: none.							       ?
+;?									       ?
+;?									       ?
+;?  REGISTER								       ?
+;?  USAGE:	AL - new setting for resident flag. (see RESCODE.SAL for       ?
+;?		     format)						       ?
+;?		CL - shift bit count					       ?
+;?		ES - holds segment of resident code			       ?
+;?		BP - offset of parameter list				       ?
+;?		DI - offset of retry index within parameter list	       ?
+;?		DL - current resident flag setting			       ?
+;?									       ?
+;?									       ?
+;?  PSUEDO CODE:							       ?
+;?									       ?
+;?	SAVE REGISTERS							       ?
+;?	SET UP SEGMENT REGISTER AND BIT MASKS				       ?
+;?	IF <RETRY REQUESTED>						       ?
+;?	   SET UP PARAMETER LIST STRUCTURE				       ?
+;?	   SET BIT MASK FOR TYPE OF RETRY AND SET pparm TO PROPER LETTER       ?
+;?	   IF <RESIDENT CODE IS NOT LOADED>				       ?
+;?	      LOAD RESIDENT CODE					       ?
+;?	   ENDIF							       ?
+;?	   GET CURRENT com_lpt_retry_type				       ?
+;?	   SET AND STORE NEW com_lpt_retry_type 			       ?
+;?	ELSEIF <RESIDENT CODE ALREADY LOADED>				       ?
+;?	   GET CURRENT com_lpt_retry_type				       ?
+;?	   IF <POSITIONAL PARAMETER SPECIFIED>				       ?
+;?	      SET FLAG TO ZERO, SET pparm TO PROPER LETTER		       ?
+;?	   ELSE 							       ?
+;?	      SET pparm TO PROPER LETTER FOR CURRENT SETTING		       ?
+;?	   ENDIF							       ?
+;?	ELSE								       ?
+;?	   SET pparm TO '-'                                                    ?
+;?	ENDIF								       ?
+;?	RESTORE REGISTERS						       ?
+;?	RETURN								       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  SIDE EFFECT: Loads resident code if it is needed and has not been loaded.  ?
+;?									       ?
+;???????????????????????????????????????????????????????????????????????????????
 ;
 SETTO	 PROC	 NEAR													   ;AN663;
 															   ;AN663;
@@ -374,39 +374,39 @@ PAGE
 
 ;------------------------------------------------------------------------------
 
-;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ณ									       ณ
-;ณ SETCOM								       ณ
-;ณ ------								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  INPUT:								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  RETURN:								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  MESSAGES: none.							       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  REGISTER								       ณ
-;ณ  USAGE:								       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  ASSUMPTIONS: All parms have been checked for validity as being possible andณ
-;ณ		 supported on the machine.				       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ									       ณ
-;ณ  SIDE EFFECT:							       ณ
-;ณ									       ณ
-;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+;???????????????????????????????????????????????????????????????????????????????
+;?									       ?
+;? SETCOM								       ?
+;? ------								       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  INPUT:								       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  RETURN:								       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  MESSAGES: none.							       ?
+;?									       ?
+;?									       ?
+;?  REGISTER								       ?
+;?  USAGE:								       ?
+;?									       ?
+;?									       ?
+;?  ASSUMPTIONS: All parms have been checked for validity as being possible and?
+;?		 supported on the machine.				       ?
+;?									       ?
+;?									       ?
+;?									       ?
+;?  SIDE EFFECT:							       ?
+;?									       ?
+;???????????????????????????????????????????????????????????????????????????????
 
 SETCOM PROC    NEAR													   ;AN000;
 															   ;AN000;

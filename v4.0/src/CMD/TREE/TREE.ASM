@@ -46,40 +46,40 @@ LISTPARM =	1			;AN000;0=SUPPRESS LIST; 1=ALLOW LIST
 ;		    1. NO FILES, JUST SUBDIRECTORIES
 
 ;		 D:\ROOT
-;		 ÃÄÄÄSUBDIR1
-;		 ÃÄÄÄSUBDIR2
-;		 ³   ÃÄÄÄSUBDIR21
-;		 ³   ÀÄÄÄSUBDIR22
-;		 ÀÄÄÄSUBDIR3
-;		     ÃÄÄÄSUBDIR31
-;		     ÀÄÄÄSUBDIR32
+;		 ????SUBDIR1
+;		 ????SUBDIR2
+;		 ?   ????SUBDIR21
+;		 ?   ????SUBDIR22
+;		 ????SUBDIR3
+;		     ????SUBDIR31
+;		     ????SUBDIR32
 
 ;		    2. FILES AND SUBDIRECTORIES
 
 ;		 D:\ROOT
-;		 ³   MAINFIL1
-;		 ³   MAINFIL2
-;		 ³
-;		 ÃÄÄÄSUBDIR1
-;		 ³	 FILE1
-;		 ³	 FILE2
-;		 ³
-;		 ÃÄÄÄSUBDIR2
-;		 ³   ³	 FILE2A
-;		 ³   ³	 FILE2B
-;		 ³   ³
-;		 ³   ÃÄÄÄSUBDIR21
-;		 ³   ³	     FILEA
-;		 ³   ³	     FILEB
-;		 ³   ³
-;		 ³   ÀÄÄÄSUBDIR22
-;		 ³	     FILEC
-;		 ³	     FILED
-;		 ³	     FILEF
-;		 ³
-;		 ÀÄÄÄSUBDIR3
-;		     ÃÄÄÄSUBDIR31
-;		     ÀÄÄÄSUBDIR32
+;		 ?   MAINFIL1
+;		 ?   MAINFIL2
+;		 ?
+;		 ????SUBDIR1
+;		 ?	 FILE1
+;		 ?	 FILE2
+;		 ?
+;		 ????SUBDIR2
+;		 ?   ?	 FILE2A
+;		 ?   ?	 FILE2B
+;		 ?   ?
+;		 ?   ????SUBDIR21
+;		 ?   ?	     FILEA
+;		 ?   ?	     FILEB
+;		 ?   ?
+;		 ?   ????SUBDIR22
+;		 ?	     FILEC
+;		 ?	     FILED
+;		 ?	     FILEF
+;		 ?
+;		 ????SUBDIR3
+;		     ????SUBDIR31
+;		     ????SUBDIR32
 ;			     FILE32A
 ;			     FILE32B
 
@@ -276,10 +276,10 @@ START:	     JMP  BEGIN 	   ;AN000;DOS ENTRY POINT
 ;NATIONAL CHARACTER CODEPAGE SET.
 GRAF_TABLE   LABEL BYTE 	   ;AN002;DEFINITION OF FOUR GRAPHIC CHARACTERS
 	     PUBLIC GRAF_TABLE	   ;AN002;
-GRAF_ELBO    DB   "À"		   ;AN000;192 DECIMAL ASCII VAL
-GRAF_DASH    DB   "Ä"		   ;AN000;196 DECIMAL ASCII VALUE
-GRAF_TEE     DB   "Ã"		   ;AN000;195 DECIMAL ASCII VALUE
-GRAF_BAR     DB   "³"		   ;AN000;179 DECIMAL ASCII VALUE
+GRAF_ELBO    DB   "?"		   ;AN000;192 DECIMAL ASCII VAL
+GRAF_DASH    DB   "?"		   ;AN000;196 DECIMAL ASCII VALUE
+GRAF_TEE     DB   "?"		   ;AN000;195 DECIMAL ASCII VALUE
+GRAF_BAR     DB   "?"		   ;AN000;179 DECIMAL ASCII VALUE
 
 
 ;		ALTERNATE SET OF GRAPHIC CHARACTERS
@@ -1208,9 +1208,9 @@ SHOW_FN PROC NEAR		   ;AN000;
 ;"FLN_INDENT" IS THE NUMBER OF SPACES TO BE PUT RIGHT IN FRONT OF A
 ;   FILENAME.  FOR SUBDIRS, THERE IS NO SUCH FIELD
 ;EXAMPLE, FOR SUBDIRS
-;      ÀÄÄÄDIR_FILN
+;      ????DIR_FILN
 ;	  FOR ORDINARY FILES
-;      ³xxxssssANY_FILN.EXT  (WHERE x AND s ARE SPACES)
+;      ?xxxssssANY_FILN.EXT  (WHERE x AND s ARE SPACES)
 ; =  =	=  =  =  =  =  =  =  =	=  =
 
   CMP  FIX_DTA_FILN,PERIOD	   ;AN000;DOES FILENAME START WITH PERIOD?
